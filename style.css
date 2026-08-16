@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 6px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-link {
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.app-icon {
+    color: #5f6368;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.app-icon:hover {
+    background-color: rgba(60, 64, 67, 0.08);
+}
+
+.sign-in-btn {
+    background-color: #1a73e8;
+    color: white;
+    text-decoration: none;
+    padding: 9px 23px;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.sign-in-btn:hover {
+    background-color: #1b66c9;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Contenido Principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -8vh;
+}
+
+.logo-container img {
+    width: 272px;
+    height: 92px;
+    margin-bottom: 20px;
+}
+
+/* Barra de Búsqueda */
+#search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 584px;
+    height: 44px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    padding: 0 14px;
+    margin-bottom: 28px;
+    transition: box-shadow 0.2s;
+}
+
+.search-bar:hover, .search-bar:focus-within {
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    border-color: transparent;
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    padding-left: 13px;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.search-icon, .mic-icon, .camera-icon {
+    color: #9aa0a6;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.mic-icon {
+    color: #4285f4;
+    margin-right: 12px;
+}
+
+.camera-icon {
+    color: #ea4335;
+}
+
+/* Botones */
+.buttons-container {
+    display: flex;
+    gap: 12px;
+}
+
+.buttons-container button {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-size: 14px;
+    padding: 0 16px;
+    height: 36px;
+    min-width: 54px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.buttons-container button:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    background-color: #f8f9fa;
+    border: 1px solid #dadce0;
+    color: #202124;
+}
+
+/* Pie de página */
+footer {
+    background-color: #f2f2f2;
+    font-size: 14px;
+    color: #70757a;
+    width: 100%;
+}
+
+.footer-row {
+    padding: 15px 30px;
+}
+
+footer hr {
+    border: none;
+    border-top: 1px solid #dadce0;
+}
+
+.links-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px 30px;
+}
+
+.footer-left, .footer-right {
+    display: flex;
+    gap: 27px;
+}
+
+footer a {
+    color: #70757a;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries para diseño responsive básico */
+@media (max-width: 650px) {
+    .search-bar {
+        width: 90%;
+    }
+    .links-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .footer-left, .footer-right {
+        gap: 15px;
+    }
+}
